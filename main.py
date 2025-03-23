@@ -1,5 +1,15 @@
 import random
+import time
+from helper import *
 def rock_paper_scissor():
+    print("Welcome to the rock paper and scissors game")
+    time.sleep(2)
+    print(rocks)
+    time.sleep(2)
+    print(paper)
+    time.sleep(2)
+    print(scissors)
+    time.sleep(2)
     rounds = int(input("Enter the amount of rounds that you wish to play: "))
     human_score = 0
     computer_score = 0
@@ -10,48 +20,78 @@ def rock_paper_scissor():
         computer_choice = random.choice(choices)
         print(computer_choice)
         if human_choice == "rock":
-            print("You chose rock")
+            print(rocks)
+            time.sleep(1)
             if computer_choice == "paper":
-                print("Computer chose paper")
-                print("You lost to a computer imagine")
+                print(paper)
+                time.sleep(1)
+                print(loose)
+                time.sleep(1)
                 computer_score += 1
-            elif computer_choice == "scissor":
-                print("Computer chose scissors")
-                print("Player won")
+            elif computer_choice == "scissors":
+                print(scissors)
+                time.sleep(1)
+                print(win)
+                time.sleep(1)
                 human_score += 1
             else:
-                print("Computer chose rock") 
-                print("Its a tie")
+                print(rocks)
+                time.sleep(1) 
+                print(tied)
+                time.sleep(1)
 
         elif human_choice == "paper":
-            print("You chose paper")
+            print(paper)
+            time.sleep(1)
             if computer_choice == "paper":
-                print("Computer chose paper")
-                print("Its a tie")
-            elif computer_choice == "scissor":
-                print("Computer chose scissors")
-                print("You lost to a computer imagine")
+                print(paper)
+                time.sleep(1)
+                print(tied)
+                time.sleep(1)
+            elif computer_choice == "scissors":
+                print(scissors)
+                time.sleep(1)
+                print(loose)
+                time.sleep(1)
                 computer_score += 1
             else:
-                print("Computer chose rock")
-                print("Player won")
+                print(rocks)
+                time.sleep(1)
+                print(win)
+                time.sleep(1)
                 human_score += 1
 
-        elif human_choice == "scissors":
-            print("You chose paper")
+        elif human_choice == "scissors":    
+            print(paper)
+            time.sleep(1)
             if computer_choice == "paper":
-                print("Computer chose paper")
-                print("Player won")
+                print(paper)
+                time.sleep(1)
+                print(win)
+                time.sleep(1)
                 human_score += 1
             elif computer_choice == "scissors":
-                print("Computer chose scissors")
-                print("Its a tie")
+                print(scissors)
+                time.sleep(1)
+                print(tied)
+                time.sleep(1)
             else:
-                print("Computer chose rock")
-                print("You lost to a computer imagine")
-            computer_choice += 1
+                print(rocks)
+                time.sleep(1)
+                print(loose)
+                time.sleep(1)
+                computer_score += 1
         else:
             print("Incorecct response, try again")
         rounds -= 1
+        print(score)
+        time.sleep(1)
+        print("Total computer score: ", computer_score)
+        time.sleep(1)
+        print("Total human score: ", human_score)
+        time.sleep(1)
+        print(round_break)
+        time.sleep(1)
+    print(bye)
 
 rock_paper_scissor()
